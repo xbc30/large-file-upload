@@ -92,7 +92,7 @@ import SparkMD5 from "spark-md5";
 import Promise from "bluebird";
 import io from "socket.io-client";
 import axios from "axios";
-const baseUrl = "http://192.168.101.69:7001";
+const baseUrl = "http://127.0.0.1:7001";
 axios.defaults.baseURL = baseUrl;
 const blobSlice =
   File.prototype.slice || File.prototype.mozSlice || File.prototype.webkitSlice;

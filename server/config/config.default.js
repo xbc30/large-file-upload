@@ -25,14 +25,14 @@ module.exports = appInfo => {
     domainWhiteList: ['*']
   };
   config.cors = {
-    origin: 'http://192.168.101.69:8080',
+    origin: '*',
     allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH,OPTIONS'
   };
 
   config.cluster = {
     listen: {
       port: 7001, // 端口
-      hostname: '192.168.101.69', // 服务器ip
+      hostname: '0.0.0.0', // 服务器ip
     },
   };
 
