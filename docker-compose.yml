@@ -1,0 +1,25 @@
+version: "3.9"
+services:
+  upload-client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    image: large-file-upload-client:1.0
+    ports:
+      - 3000:80
+    networks:
+      - local
+  upload-server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    image: large-file-upload-server:1.0
+    volumes:
+       - ./uploads:/var/lib/server/uploads
+    ports:
+      - 7001:7001
+    networks:
+      - local
+networks:
+    local:
+        driver: bridge

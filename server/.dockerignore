@@ -1,0 +1,11 @@
+**/.git
+**/.DS_Store
+*.log
+.dockerignore
+.git
+.gitignore
+.vscode
+.env
+*.pid
+package-lock.json
+node_modules/
